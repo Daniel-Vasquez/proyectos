@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Kajitas</title>
+  <style>
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      background: linear-gradient(#e66465, #9198e5);
+      margin: 0;
+      height: 100vh;
+      display: flex;
+    }
+
+    .flexbox {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      /* box-sizing: border-box; */
+      /* border: 3px solid orange; */
+      width: fit-content;
+      margin: 0 auto;
+      /* border: 1px solid red; */
+    }
+
+    /* .haspas {
+      margin: 0 auto;
+      border: 5px solid black;
+    } */
+
+    .box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 200px;
+      /* height: 200px; */
+      border: 2px solid red;
+      /* box-sizing: border-box; */
+    }
+
+    .boxmini {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      width: 55px;
+      height: 55px;
+      border: 1px solid green;
+    }
+
+    .mini_mini {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      width: 20px;
+      height: 20px;
+      border: 1.5px solid magenta;
+    }
+
+    .mini_por_dos {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 5px;
+      height: 5px;
+      border: 1.5px solid black;
+    }
+
+    .nano {
+      width: 1.5px;
+      height: 1.5px;
+      background: purple;
+    }
+
+
+    .fondo_negro {
+      background: black;
+    }
+
+    .fondo_negro .boxmini {
+      background: white;
+      /*Es como un if que busca de adentro hacia afuera*/
+    }
+
+    .fondo_negro .boxmini .mini_mini {
+      background: yellow;
+    }
+
+    .fondo_naranja {
+      background: orange;
+    }
+
+    .fondo_naranja .boxmini {
+      background: white;
+      /*Es como un if que busca de adentro hacia afuera*/
+    }
+
+    .fondo_naranja .boxmini .mini_mini {
+      background: greenyellow;
+    }
+
+    .box.fondo_naranja .boxmini.caja_naranja_enmedio {
+      background: black;
+    }
+
+    .box.fondo_naranja .boxmini.caja_naranja_abajo {
+      background: purple;
+    }
+
+    .box.fondo_negro .caja_negro_arriba {
+      background: tomato;
+    }
+
+    .box.fondo_negro .caja_negro_abajo {
+      background: yellow;
+    }
+
+    .fondo_rosa {
+      background: pink;
+    }
+
+    .box.fondo_rosa .caja_rosa_arriba {
+      background: maroon;
+    }
+
+    .box.fondo_rosa .caja_rosa_enmedio {
+      background: mediumseagreen;
+    }
+
+    .fondo_rosa .boxmini {
+      background: white;
+      /*Es como un if que busca de adentro hacia afuera*/
+    }
+
+    .barras {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      /* border: 1.5px solid black; */
+
+    }
+
+    .mini_barras {
+      border: 1px solid purple;
+    }
+
+    .mini_barras_caja {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 55px;
+      height: 55px;
+      border: 1px solid green;
+      background: red;
+    }
+
+    .nano_barras_caja {
+      width: 25px;
+      height: 25px;
+      /* border: 1px solid black; */
+      background: black;
+      border-top-left-radius: 55px;
+      border-top-right-radius: 15px;
+      border-bottom-right-radius: 55px;
+      border-bottom-left-radius: 15px;
+    }
+
+    .box.fondo_naranja {
+      border-top-left-radius: 55px;
+    }
+
+    .box.fondo_rosa {
+      border-bottom-right-radius: 55px;
+    }
+
+    #haspa_derecha .fondo_azul {
+      background: teal;
+      border-top-left-radius: 0;
+      border-top-right-radius: 55px;
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0px;
+    }
+
+    #haspa_izq .fondo_amarillo {
+      background: yellow;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 55px;
+    }
+
+    #caja_amarilla_arriba {
+      background: white;
+    }
+
+    .boxmini.caja_amarilla_enmedio {
+      background: black;
+    }
+
+    .boxmini.caja_amarilla_abajo {
+      background: magenta;
+    }
+
+    .boxmini.caja_azul_arriba {
+      background: navy;
+    }
+
+    .boxmini.caja_azul_enmedio {
+      background: rebeccapurple;
+    }
+
+    #caja_azul_abajo{
+      background: white;
+    }
+
+    #mini_barras_izquierda .boxmini {
+      background: purple;
+    }
+
+    #mini_barras_derecha .boxmini {
+      background: purple;
+
+    }
+
+    .button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+      width: 70px;
+      height: 35px;
+      margin-bottom: 25px;
+      border: 3px solid #9c27b0;
+    }
+
+    .div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      margin: 0 auto;
+      /* border: 1px solid red; */
+    }
+
+  </style>
+</head>
+
+<body>
+
+  
+  <div class="div">
+
+    <a class="button" href="../">Home</a>
+    
+    <div class="flexbox">
+
+    <!-- #haspa_izq -->
+    <div class="haspas" id="haspa_izq">
+      <div class="box fondo_amarillo">
+        <div class="barras">
+          <!--#mini_barras_izquierda-->
+          <div class="mini_barras" id="mini_barras_izquierda">
+            <div class="mini_barras_caja">
+              <div class="nano_barras_caja"></div>
+            </div>
+          </div>
+          <!--/mini_barras_izquierda-->
+
+          <!--#mini_barras_enmedio-->
+          <div class="mini_barras" id="mini_barras_enmedio">
+            <!-- #caja_amarilla_arriba -->
+            <div class="boxmini" id="caja_amarilla_arriba">
+              <div class="mini_mini">
+                <div class="mini_por_dos">
+                  <div class="nano"></div>
+                </div>
+                <div class="mini_por_dos"></div>
+              </div>
+              <div class="mini_mini"></div>
+            </div>
+            <!-- /caja_amarilla_arriba -->
+
+            <!-- #caja_amarilla_enmedio -->
+            <div class="boxmini caja_amarilla_enmedio"></div>
+            <!-- /caja_amarilla_enmedio -->
+
+            <!-- #caja_amarilla_abajo -->
+            <div class="boxmini caja_amarilla_abajo"></div>
+            <!-- /caja_amarilla_abajo -->
+          </div>
+          <!--/mini_barras_enmedio-->
+
+          <!--#mini_barras_derecha-->
+          <div class="mini_barras" id="mini_barras_derecha">
+            <div class="mini_barras_caja">
+              <div class="nano_barras_caja"></div>
+            </div>
+          </div>
+          <!--/mini_barras_derecha-->
+        </div>
+      </div>
+    </div>
+    <!-- /haspa_izq -->
+
+
+
+    <!----- #haspa_enmedio ----->
+    <div class="haspas" id="haspa_enmedio">
+
+
+      <!-- #caja_naranja -->
+      <div class="box fondo_naranja">
+        <div class="barras">
+          <!--#mini_barras_izquierda-->
+          <div class="mini_barras" id="mini_barras_izquierda">
+            <div class="mini_barras_caja">
+              <div class="nano_barras_caja"></div>
+            </div>
+          </div>
+          <!--/mini_barras_izquierda-->
+
+          <!--#mini_barras_enmedio-->
+          <div class="mini_barras" id="mini_barras_enmedio">
+
+            <!--#caja_naranja_arriba-->
+            <div class="boxmini" id="caja_naranja_arriba">
+              <div class="mini_mini">
+                <div class="mini_por_dos">
+                  <div class="nano"></div>
+                </div>
+                <div class="mini_por_dos"></div>
+              </div>
+              <div class="mini_mini"></div>
+            </div>
+            <!--/caja_naranja_arriba-->
+
+            <!--#caja_naranja_emnedio-->
+            <div class="boxmini caja_naranja_enmedio"></div>
+            <!--/caja_naranja_emnedio-->
+
+            <!--#caja_naranja_abajo-->
+            <div class="boxmini caja_naranja_abajo"></div>
+            <!--#caja_naranja_abajo-->
+
+          </div>
+          <!--/mini_barras_enmedio-->
+
+          <!--#mini_barras_derecha-->
+          <div class="mini_barras" id="mini_barras_derecha">
+            <div class="mini_barras_caja">
+              <div class="nano_barras_caja"></div>
+            </div>
+          </div>
+          <!--/mini_barras_derecha-->
+
+        </div>
+      </div>
+      <!-- /caja_naranja -->
+
+
+      <!-- #caja_negro -->
+      <div class="box fondo_negro">
+        <div class="barras">
+          <!--#mini_barras_izquierda-->
+          <div class="mini_barras" id="mini_barras_izquierda">
+            <div class="boxmini"></div>
+          </div>
+          <!--/mini_barras_izquierda-->
+
+          <!--#mini_barras_enmedio-->
+          <div class="mini_barras" id="mini_barras_enmedio">
+
+            <!--#caja_negro_arriba-->
+            <div class="boxmini caja_negro_arriba"></div>
+            <!--/caja_negro_arriba-->
+
+            <!--#caja_negro_enmedio-->
+            <div class="boxmini" id="caja_negro_enmedio">
+              <!--caja_negro_enmedio-->
+              <div class="mini_mini">
+                <div class="mini_por_dos">
+                  <div class="nano"></div>
+                </div>
+                <div class="mini_por_dos"></div>
+              </div>
+              <div class="mini_mini"></div>
+            </div>
+            <!--/caja_negro_enmedio-->
+
+            <!--#caja_negro_abajo-->
+            <div class="boxmini caja_negro_abajo"></div>
+            <!--/caja_negro_abajo-->
+          </div>
+          <!--/mini_barras_enmedio-->
+
+          <!--#mini_barras_derecha-->
+          <div class="mini_barras" id="mini_barras_derecha">
+            <div class="boxmini"></div>
+          </div>
+          <!--/mini_barras_derecha-->
+        </div>
+      </div>
+      <!-- /caja_negro -->
+
+
+      <!-- #caja_rosa -->
+      <div class="box fondo_rosa">
+        <div class="barras">
+
+          <!--#mini_barras_izquierda-->
+          <div class="mini_barras" id="mini_barras_izquierda">
+            <div class="mini_barras_caja">
+              <div class="nano_barras_caja"></div>
+            </div>
+          </div>
+          <!-- /mini_barras_izquierda -->
+
+
+          <!--#mini_barras_enmedio-->
+
+          <div class="mini_barras" id="mini_barras_enmedio">
+
+            <!-- #caja_rosa_arriba -->
+            <div class="boxmini caja_rosa_arriba"></div>
+            <!-- /caja_rosa_arriba -->
+
+            <!-- #caja_rosa_enemdio -->
+            <div class="boxmini caja_rosa_enmedio"></div>
+
+            <!-- /caja_rosa_enemdio -->
+
+            <!-- #caja_rosa_abajo -->
+            <div class="boxmini" id="caja_rosa_abajo">
+              <div class="mini_mini">
+                <div class="mini_por_dos">
+                  <div class="nano"></div>
+                </div>
+                <div class="mini_por_dos"></div>
+              </div>
+              <div class="mini_mini"></div>
+            </div>
+            <!-- /caja_rosa_abajo -->
+          </div>
+
+          <!-- /mini_barras_enmedio -->
+
+
+          <!--#mini_barras_derecha-->
+          <div class="mini_barras" id="mini_barras_derecha">
+            <div class="mini_barras_caja">
+              <div class="nano_barras_caja"></div>
+            </div>
+          </div>
+          <!-- /mini_barras_derecha -->
+
+        </div>
+      </div>
+      <!-- /caja_rosa -->
+
+    </div>
+    <!----- /haspa_enmedio ------>
+
+
+
+    <!-- #haspa_derecha -->
+    <div class="haspas" id="haspa_derecha">
+      <div class="box fondo_azul">
+        <div class="barras">
+          <!--#mini_barras_izquierda-->
+          <div class="mini_barras" id="mini_barras_izquierda">
+            <div class="mini_barras_caja">
+              <div class="nano_barras_caja"></div>
+            </div>
+          </div>
+          <!--/mini_barras_izquierda-->
+
+
+          <!--#mini_barras_enmedio-->
+          <div class="mini_barras" id="mini_barras_enmedio">
+
+            <!--#caja_azul_arriba-->
+            <div class="boxmini caja_azul_arriba"></div>
+            <!--/caja_azul_arriba-->
+
+            <!--#caja_azul_enmedio-->
+            <div class="boxmini caja_azul_enmedio"></div>
+            <!--/caja_azul_enmedio-->
+
+            <!--#caja_azul_abajo-->
+            <div class="boxmini" id="caja_azul_abajo">
+                <div class="mini_mini">
+                  <div class="mini_por_dos">
+                    <div class="nano"></div>
+                  </div>
+                  <div class="mini_por_dos"></div>
+                </div>
+                <div class="mini_mini"></div>
+            </div>
+            <!--/caja_azul_abajo-->
+            
+          </div>
+          <!--/mini_barras_enmedio-->
+
+
+          <!--#mini_barras_derecha-->
+          <div class="mini_barras" id="mini_barras_derecha">
+            <div class="mini_barras_caja">
+              <div class="nano_barras_caja"></div>
+            </div>
+          </div>
+          <!--/mini_barras_derecha-->
+        </div>
+      </div>
+    </div>
+    <!-- /haspa_derecha -->
+
+    </div>
+
+  </div>
+</body>
+
+</html>

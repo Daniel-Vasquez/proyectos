@@ -1,0 +1,125 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+/* img {
+    max-width: 100%;
+} */
+
+.fondo {
+  background-color: rebeccapurple;
+}
+
+.fondo2 {
+  background-color: blue;
+  text-align: center;
+  font-size: 40px;
+}
+
+.fondo3 {
+  background-color: chocolate;
+}
+
+.texto {
+  display: flex;
+  justify-content: center;
+  color: red;
+}
+
+.texto1{
+  text-align: center;
+}
+
+.texto2 {
+  color: white;
+}
+
+.me-vale-lo-de-arriba {
+	background-color: yellow;
+	color: green;
+}
+
+.foto-levi {
+  width: 50%;
+  height: 250px;
+}
+
+.esquinas-redonditas {
+  border-radius: 20px;
+}
+
+.cajita-de-levi {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  /* justify-content: flex-end; */
+  /* justify-content: flex-start; */
+}
+
+.texto-centradito {
+  width: 500px;
+  text-align: right;
+  text-align: center;
+  text-align: left;
+  text-align: justify;
+}
+
+.cajita-de-texto-centredito {
+  display: flex;
+  justify-content: center;
+  border: 1px solid blue;
+  border-radius: 100px;
+}
+
+.centrar-mi{
+  display: flex;
+  justify-content: center;
+  border-radius: 100px;
+  margin: 10px 0;
+  border: 1px dashed red;
+}
+
+.mi{
+  width: 400px;
+  text-align: center; 
+}
+
+.fondo-nuevo {
+  width: fit-content;
+  background-color: yellow;
+  margin: 10px;
+}
+
+.fondo.texto.mi {
+  font-size: 30px;
+}
+
+.fondo3.texto2.texto-centradito {
+  font-size: 20px;
+}
+
+strong, p {
+  margin: 0;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  width: 70px;
+  height: 35px;
+  margin-bottom: 25px;
+  border: 3px solid #9c27b0;
+}

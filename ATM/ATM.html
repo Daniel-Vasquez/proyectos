@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>ATM</title>
+	<meta name="viewport" content="width=device-width, initial-sacale = 1">
+	<style>
+		body {
+			margin: 0;
+			background: linear-gradient(#e66465, #9198e5);
+			height: 100vh;
+		}
+		
+		.box {
+			display: flex;
+    	justify-content: center;
+    	align-items: center;
+    	flex-direction: column;
+    	max-width: 1000px;
+			margin: 0 auto;
+			padding: 3px;
+		}
+
+		.cajero {
+			width: 300px;
+		}
+		
+		.resultado {
+      display: flex;
+      flex-wrap: wrap;
+		}
+		
+		.resultado img {
+      margin-right: 5px;
+			margin-bottom: 5px;
+		}
+
+		#dinero {
+			outline: none;
+		}
+
+		.recargar {
+			color: white;
+			font-weight: 900;
+			text-decoration: none;
+			padding-bottom: 5px;
+			margin-top: 20px;
+			border-bottom: 1px solid red;
+		}
+
+		.button {
+      text-decoration: none;
+			margin-top: 20px;
+			padding: 2px;
+      border: 2px solid #9c27b0;
+    }
+
+		
+    </style>
+</head>
+
+<body>
+	<div class="box">
+			<img class="cajero" src="img/cajero.gif" />
+			<a class="recargar" href="ATM.html">Recargar</a>
+			<a class="button" href="../">Home</a>
+		<p>
+			<input type="number" id="dinero" placeholder="Ingresa una cantidad" />
+			<input type="button" value="Retirar" id="extraer" />
+			<input type="button" value="Historial" id="Historial" />
+		</p>
+		<div class="resultado" id="resultado"></div>
+		<div id="HistorialCre"></div>
+		<script src="cajeroTarea.js"></script>
+	</div>
+</body>
+
+</html>

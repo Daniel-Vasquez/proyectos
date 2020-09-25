@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Tu peso en un lugar donde pesas menos</title>
+	<style>
+
+		body {
+    	/* Ubicación de la imagen */
+    	background-image: url('img/fondo.png');
+    	/* Para dejar la imagen de fondo centrada, vertical y
+    	horizontalmente */
+    	background-position: center center;
+    	/* Para que la imagen de fondo no se repita */
+			background-repeat: no-repeat;
+			margin: 0;
+			padding: 0;
+			background-size: cover;
+			min-height: 100vh;
+		}
+		
+  	.principal {
+      /* border: 10px solid white; */
+			margin-bottom: 10px;
+			display: flex;
+		}
+		
+  	.contenido {
+      width: 700px;
+      /* text-align:rtepruebabotonEDIT.html center; */
+			margin: 0 auto;
+			padding: 10px;
+		}
+
+		#QuePlaneta {
+			margin: 15px;
+			cursor: nw-resize;
+			outline: none; /*Para que no se le pongan bordes al boton cuando se le haga :focus (Click)*/
+			font-size: 18px;
+			border-radius: 5px;
+		}
+		
+  	.caja {
+			margin: 15px;
+			width: 150px;
+			font-size: 18px;
+			outline: none; /*Para que no se le pongan bordes al boton cuando se le haga :focus (Click)*/
+			border: 2px solid red;
+			cursor: nw-resize;
+			background: transparent;
+			color: black;
+		}
+
+  	.titulo {
+      color: blue;
+			width: fit-content;
+			margin: 0;
+		}
+		
+  	.letras {
+      color: red;
+      width: fit-content;
+  	}
+	
+  	.texto_centrado {
+      margin: 5px;
+		}
+		
+		.container_img {
+			display: flex;
+			justify-content: center;
+			/* border: 1px solid red; */
+		}
+
+		img {
+			width: 60%;
+			height: 50%;
+			margin: 0 auto;
+			right: 100px;
+			transition: 0.6s all;
+		}
+		
+		/* #ImgPlanetitas:hover {
+			transform: scale(1.5) rotate(360deg); 
+    	box-shadow: 15px 18px 18px 0px rgba(161,44,161,1);
+   	 	background: transparent;
+		} */
+		
+		p {
+			margin: 15px;
+		}
+
+		#resultado {
+			color: #ffeb3b;
+			font-size: 20px;
+		}
+
+		.button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+      width: 60px;
+      height: 25px;
+      margin-top: 15px;
+      border: 3px solid #9c27b0;
+    }
+
+  </style>
+</head>
+
+<body>
+	<div class="principal">
+		<div class="contenido">
+
+			<h1 class="titulo">Tu peso en otro planeta del sistema solar.</h1>
+
+			<h3 class="letras">(En la tierra pesas distinto que en Marte o Jupiter).</h3>
+
+			<!-- Planeta -->
+			<select id="QuePlaneta">
+				<option value="mercurio">
+					Mercurio
+				</option>
+
+				<option value="venus">
+					Venus
+				</option>
+
+				<option value="marte">
+					Marte
+				</option>
+
+				<option value="jupiter">
+					Jupiter
+				</option>
+
+				<option value="saturno">
+					Saturno
+				</option>
+
+				<option value="urano">
+					Uruno
+				</option>
+
+				<option value="neptuno">
+					Neptuno
+				</option>
+			</select>
+			<!-- Planeta -->
+
+			<br>
+
+			<input class="caja" type="number" id="texto" placeholder="Ingresa tu peso" autocomplete="off">
+			<!--placeholder: pone un titulo en la caja de texto-->
+
+			<br>
+
+			<p id="resultado"></p>
+			<!--Creamos un parrafo para ahi poner el resultado y no se desaparezca todo lo demas-->
+			<div class="container_img">
+				<img class="planetas" src="" alt="la imagen" id="ImgPlanetitas">
+			</div>
+
+			<a class="button" href="../">Home</a>
+		</div>
+	</div>
+
+
+	<script src="planetas.js"></script>
+
+</body>
+<html>
