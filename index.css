@@ -79,7 +79,14 @@ canvas {
   width: 300px;
   height: 250px;
   margin-top: 20px;
+  border-radius: 10px;
+  transition: .5s all;
   background-color: #0D0909;
+}
+
+canvas:hover {
+  background: transparent;
+  border: 1px solid black;
 }
 
 .limpiar {
